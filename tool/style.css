@@ -1,0 +1,39 @@
+:root { --bg:#1d1f23; --panel:#262a30; --fg:#e6e6e6; --dim:#9aa0a8; --acc:#4da3ff; --line:#3a3f47; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.35 system-ui, sans-serif; }
+header { display:flex; gap:22px; align-items:baseline; padding:8px 14px; background:var(--panel); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+header .title { font-weight:600; } #h-batch, #h-who { color:var(--dim); }
+.state { margin-left:auto; padding:2px 10px; border-radius:10px; background:#333; }
+.state.err { background:#9a2a2a; color:#fff; font-weight:600; } .state.saved { background:#1f5133; } .state.unsaved { background:#7a5a10; }
+main { display:flex; gap:14px; padding:12px 14px; align-items:flex-start; flex-wrap:wrap; }
+#imgs { display:flex; gap:14px; flex:1 1 560px; min-width:0; }
+#imgs figure { margin:0; flex:1; min-width:0; background:#000; padding:6px; border-radius:6px; text-align:center; }
+#imgs figcaption { color:var(--dim); font-size:12px; margin-bottom:4px; }
+#imgs img { max-width:100%; max-height:62vh; image-rendering:auto; }
+#img-patch { min-width:60%; }
+.missing { color:#ff8a80; font-weight:600; padding:20px; }
+#side { flex:0 1 380px; background:var(--panel); padding:10px 12px; border-radius:6px; }
+#item-id { color:var(--dim); margin-bottom:6px; font-family:monospace; }
+#answers { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+#answers button { text-align:left; padding:7px 10px; } #answers button b { color:#ffd479; font-family:monospace; margin-right:6px; }
+#answers button.sel { background:var(--acc); color:#001; border-color:var(--acc); } #answers button.sel b { color:#001; }
+button { background:#343942; color:var(--fg); border:1px solid #4a505a; border-radius:4px; padding:4px 10px; font:inherit; cursor:pointer; }
+button:hover { background:#3f4550; } button:disabled { opacity:.4; cursor:default; }
+.notelab { display:block; margin:10px 0; color:var(--dim); } textarea { display:block; width:100%; margin-top:3px; background:#1a1c20; color:var(--fg); border:1px solid #4a505a; border-radius:4px; font:inherit; padding:4px; }
+.nav { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; } .hint { color:var(--dim); font-size:12px; margin-top:10px; }
+#strip { display:flex; flex-wrap:wrap; gap:3px; padding:6px 14px 24px; }
+#strip span { width:26px; height:22px; font-size:11px; line-height:20px; text-align:center; border:1px solid #4a505a; border-radius:3px; cursor:pointer; color:var(--dim); }
+#strip span.ans { background:#1f5133; color:#fff; border-color:#2d7a4b; } #strip span.cur { outline:2px solid #ffd479; color:#fff; }
+#gallery { position:fixed; inset:0; background:#000c; z-index:50; overflow:auto; padding:24px 14px; }
+.gbox { max-width:1000px; margin:0 auto; background:var(--panel); border-radius:8px; padding:12px 18px; }
+.ghead { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.gcls { border-top:1px solid var(--line); padding:8px 0; } .gcls h4 { margin:0 0 4px; } .gcls h4 b { color:#ffd479; font-family:monospace; margin-right:6px; }
+.gcls .desc { color:var(--dim); margin-bottom:4px; } .gcls img { height:140px; margin:0 6px 6px 0; background:#000; vertical-align:top; }
+.gcls .missing { display:inline-block; padding:4px 8px; font-size:12px; }
+#loader { position:fixed; inset:0; z-index:100; background:var(--bg); overflow:auto; display:flex; justify-content:center; align-items:flex-start; padding:40px 14px; }
+#loader .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px 22px; max-width:780px; width:100%; }
+#loader h2 { margin:0 0 10px; }
+#loader table { border-collapse:collapse; margin:8px 0; } #loader td { padding:2px 14px 2px 0; vertical-align:top; } #loader td:first-child { color:var(--dim); white-space:nowrap; }
+#loader .bad { color:#ff8a80; } #loader .ok { color:#6fdc8c; } #loader .ldmsg { font-weight:600; color:#ffd479; margin:8px 0; }
+#loader .btns { display:flex; gap:10px; margin-top:12px; align-items:center; flex-wrap:wrap; }
+a { color:#7db8ff; }

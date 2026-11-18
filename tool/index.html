@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring annotator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader">
+  <div class="card">
+    <h2>Ring annotator</h2>
+    <div id="ld-unsupported" class="ldmsg" style="display:none"></div>
+    <div id="ld-pick">
+      <p>Choose the batch folder you were given. The page will tell you what it found before you start.</p>
+      <button id="ld-choose">Choose batch folder</button>
+    </div>
+    <div id="ld-report" style="display:none"></div>
+    <p><a href="readme.html" target="_blank" rel="noopener">Instructions (opens in a new tab)</a></p>
+  </div>
+</div>
+<header id="hdr">
+  <span class="title">Ring annotator</span><a id="h-help" href="readme.html" target="_blank" rel="noopener">Instructions</a>
+  <span id="h-batch"></span><span id="h-who"></span>
+  <span id="h-prog"></span>
+  <span id="h-state" class="state"></span>
+</header>
+<main>
+  <section id="imgs">
+    <figure><figcaption>Ring patch</figcaption><img id="img-patch" alt="patch"><div id="miss-patch" class="missing" style="display:none"></div></figure>
+    <figure><figcaption>Bird, patch outlined</figcaption><img id="img-context" alt="context"><div id="miss-context" class="missing" style="display:none"></div></figure>
+  </section>
+  <section id="side">
+    <div id="item-id"></div>
+    <div id="answers"></div>
+    <label class="notelab">Note (optional)<textarea id="note" rows="3"></textarea></label>
+    <div class="nav">
+      <button id="b-back">&larr; Back</button><button id="b-fwd">Forward &rarr;</button>
+      <button id="b-undo">Undo</button><button id="b-first">First unanswered</button>
+    </div>
+    <div class="nav"><button id="b-ref">Reference (G)</button><button id="b-export">Export CSV</button></div>
+    <div class="hint">Keys: digits and letters shown on the buttons, &larr; &rarr; move, Ctrl+Z undo, G reference, Esc closes it.</div>
+  </section>
+</main>
+<div id="strip"></div>
+<div id="gallery" style="display:none"><div class="gbox"><div class="ghead"><b>Reference</b><button id="b-gclose">Close (Esc)</button></div><div id="gbody"></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>

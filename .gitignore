@@ -1,0 +1,13 @@
+# annotation outputs and batch folders are shared directly, never through this repository
+annotations/
+*.json.bak
+.*.tmp
+batches/
+# images are never committed; the test builds its own in temp/
+*.jpg
+*.jpeg
+*.png
+temp/
+# keys link item_id to video, bird and model output and must never be committed
+keys/
+__pycache__/
